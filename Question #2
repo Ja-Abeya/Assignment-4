@@ -1,0 +1,17 @@
+def computepay(hours, rate):
+    if hours <= 40:
+        return hours * rate
+    else:
+        regular_pay = 40 * rate
+        overtime_hours = hours - 40
+        overtime_pay = overtime_hours * rate * 1.5
+        return regular_pay + overtime_pay
+
+try:
+    hours = float(input("Enter the number of hours worked: "))
+    rate = float(input("Enter the hourly rate: "))
+except ValueError:
+    print("Invalid input. Please enter numeric values for hours and rate.")
+else:
+    salary = computepay(hours, rate)
+    print(f"Total salary: ${salary:.2f}")

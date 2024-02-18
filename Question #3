@@ -22,3 +22,4 @@ while True:
     result = num_divide3(num)
     print(f"Number of integers divisible by 3 between 1 and {num}: {result}")
 
+
